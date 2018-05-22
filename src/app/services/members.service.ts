@@ -29,7 +29,7 @@ export class MembersService {
         for (let key in data) {
             params = params.set(key, data[key]);
         }
-        let limit = _limit || 2;
+        let limit = _limit || 6;
         limit += limit;
         return this.httpClient.get(url, {params}).pipe(
           map((members: any) => {
